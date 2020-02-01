@@ -7,5 +7,5 @@ import (
 
 func main() {
 	fmt.Println(("running..."))
-	ch2.IODemo()
+	ch2.EchoDemo()
 }
