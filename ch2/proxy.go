@@ -7,20 +7,22 @@ import (
 )
 
 func handle(src net.Conn) {
-	dst, err := net.Dial("tcp", "baidu.com:80")
+	//target := "society.people.com.cn:80"
+	target := "google.com:80"
+	dst, err := net.Dial("tcp", target)
 	if err != nil {
-		log.Fatalln("Unable to connect dst site")
+		log.Fatalln("Unable to connect", target)
 	}
 	defer dst.Close()
 	// forward src to dst
 	go func() {
 		if _, err := io.Copy(dst, src); err != nil {
-			log.Fatalln(err)
+			log.Println(err)
 		}
 	}()
 	// forward dst to src
 	if _, err := io.Copy(src, dst); err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 }
 
