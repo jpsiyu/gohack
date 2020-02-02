@@ -5,11 +5,11 @@ import (
 
 	"log"
 
-	"github.com/jpsiyu/gohack/ch2"
+	"github.com/jpsiyu/gohack/ch3"
 )
 
 func main() {
 	log.SetFlags(log.Lshortfile | log.LstdFlags)
 	fmt.Println(("running..."))
-	ch2.ProxyDemo()
+	ch3.Demo35()
 }
