@@ -5,11 +5,11 @@ import (
 
 	"log"
 
-	"github.com/jpsiyu/gohack/ch4"
+	"github.com/jpsiyu/gohack/ch5"
 )
 
 func main() {
 	log.SetFlags(log.Lshortfile | log.LstdFlags)
 	fmt.Println(("running..."))
-	ch4.TemplateDemo()
+	ch5.SimpleLookup()
 }
