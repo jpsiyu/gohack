@@ -11,5 +11,5 @@ import (
 func main() {
 	log.SetFlags(log.Lshortfile | log.LstdFlags)
 	fmt.Println(("running..."))
-	ch5.SimpleLookup()
+	ch5.FlagParser()
 }
